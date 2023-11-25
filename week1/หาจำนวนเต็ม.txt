@@ -1,0 +1,14 @@
+void main() {
+  int num = 10;
+  
+    if(num < 0){
+        print("$num is negative integer");
+        
+    }else if(num > 0){
+        print("$num is positive integer");
+        
+    }else{
+        print("$num is zero integer");
+        
+    }
+}

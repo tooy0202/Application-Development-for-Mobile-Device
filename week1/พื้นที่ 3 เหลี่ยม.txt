@@ -1,0 +1,5 @@
+void main() {
+  double base = 50.5;
+  double high = 50.5;
+  print("1/2 x $base x $high = ${1 / 2 * base * high}");
+}
