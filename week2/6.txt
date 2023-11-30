@@ -1,0 +1,6 @@
+import 'package:collection/collection.dart';
+void main() {
+  final list = [10, 22, 33, 44, 55, 1, 2, 3, 4, 8];
+  final sum = list.sum;
+  print("List sum is $sum");
+}

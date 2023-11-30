@@ -1,0 +1,7 @@
+void main() {
+  List<String> fruits = ['apple', 'orange', 'mango'];
+  fruits.insert(0, 'dragonfruit');
+  fruits.add('pineapple');
+  fruits.removeAt(2);
+  print(fruits);
+}

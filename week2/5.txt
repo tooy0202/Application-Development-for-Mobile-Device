@@ -1,0 +1,6 @@
+import 'dart:math' show min, max;
+void main() {
+  List<int> number = [10,5,2,6,4,9,1,100,50,22];
+  print("The minimum number is ${number.reduce(max)}");
+  print("The maximum number is ${number.reduce(min)}");
+}

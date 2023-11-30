@@ -1,0 +1,12 @@
+double sum(List<double> dat) {
+  double num = dat[0];
+  double sum = 0;
+  for (int i = 2; i >= 0; i--) {
+    sum += dat[i];
+  }
+  return sum;
+}
+void main() {
+  List<double> dat=[2,-3.5,5.5];
+  print(sum(dat));
+}

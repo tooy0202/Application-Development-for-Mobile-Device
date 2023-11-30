@@ -1,0 +1,13 @@
+int max(List<int> dat) {
+  int max = dat[0];
+  for (int i = 1; i < dat.length; i++) {
+    if (dat[i] > max) {
+      max = dat[i];
+    }
+  }
+  return max;
+}
+void main() {
+  List<int> dat = [1, 2, 3, -4];
+  print(max(dat)); // 3
+}

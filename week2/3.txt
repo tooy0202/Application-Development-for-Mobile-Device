@@ -1,0 +1,12 @@
+void toDict(int? id, String? name, double? salary) {
+  Map<String, dynamic> dict = {
+    "id": id,
+    "name": name,
+    "salary": salary
+  };
+  print(dict);
+}
+
+void main() {
+  toDict(1, "ninja", 20000);
+}
