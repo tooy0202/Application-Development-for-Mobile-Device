@@ -1,0 +1,35 @@
+class Car {
+  late String brand;
+  late String model;
+  late int cc;
+  late String color;
+  Car(this.brand, this.model, this.cc, this.color);
+  void start() {
+    print('รถ ${brand} ${model} ขนาด $cc สี ${color} กำลังเคลื่อนที่');
+  }
+
+  void stop() {
+    print('รถ ${brand} ${model} ขนาด $cc สี ${color} หยุดเคลื่อนที่');
+  }
+
+  void changeGear(dynamic gear) {
+    if (gear is int && (gear >= 1 && gear <= 5)) {
+      print('รถ $brand เปลี่ยนเป็นเกียร์ $gear');
+    } else if (gear == 'R') {
+      print('รถ $brand เปลี่ยนเป็นเกียร์ ${gear}');
+    } else {
+      print('รถ $brand ไม่สามารถใช้งานเกียร์ ${gear} ได้');
+    }
+  }
+}
+
+void main() {
+  Car car1 = Car('Honda', 'Civic', 1500, 'Black');
+  Car car2 = Car('Honda', 'Civic', 1500, 'red');
+  Car car3 = Car('Mazda', 'Civic', 1500, 'Blue');
+  car1.start();
+  car2.stop();
+  car3.changeGear(1);
+  car1.changeGear(7);
+  car3.changeGear('R');
+}

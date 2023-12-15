@@ -1,0 +1,40 @@
+class Account {
+  late int accId;
+  late String accName;
+  late double balance;
+  Account(this.accId, this.accName, {this.balance = 500});
+  void deposite(double amount) {
+    if (balance > 0) {
+      balance = balance + amount;
+    }
+    print('..ฝากเงินจำนวน ${amount} บาท ไปยัง ID ${accId} สำเร็จ..');
+  }
+
+  void withdraw(double amount) {
+    double check_balance = balance - amount;
+    if (check_balance < 0) {
+      print('..ยอดเงินใน ID ${accId} ไม่เพียงพอ..');
+    } else {
+      balance = check_balance;
+      print('..ถอนเงินจำนวน ${amount} บาท ไปยัง ID ${accId} สำเร็จ..');
+    }
+    check_balance = 0;
+  }
+
+  void checkBalance() {
+    print('ID ${accId} : ${accName} มียอดคงเหลือ ${balance} บาท');
+  }
+}
+
+void main() {
+  Account acc1 = Account(1, 'Def', balance: 1000);
+  Account acc2 = Account(2, 'Bee', balance: 2000);
+  acc1.deposite(200);
+  acc2.withdraw(500);
+  acc1.withdraw(10000);
+  acc1.withdraw(500);
+  print('ตรวจสอบยอดเงิน');
+  acc1.checkBalance();
+  print('ตรวจสอบยอดเงิน');
+  acc2.checkBalance();
+}

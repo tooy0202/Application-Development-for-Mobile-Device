@@ -1,0 +1,64 @@
+class Student {
+  late int id;
+  late String firstName;
+  late String lastName;
+  late double gpa;
+  Student(this.id, this.firstName, this.lastName, {this.gpa = 0.00});
+  void changeName({required String stdFirstname, required String stdLastname}) {
+    if (stdFirstname is String) {
+      firstName = stdFirstname;
+    }
+    if (stdLastname is String) {
+      lastName = stdLastname;
+    }
+    print('Student ${id} เปลี่ยนชื่อเรียบร้อย ..');
+  }
+
+  void showInfo() {
+    print('Student ${id} ชื่อ ${firstName} ${lastName} gpa: ${gpa}');
+  }
+
+  void checkGrade() {
+    String i;
+    switch (gpa) {
+      case < 1.99:
+        i = 'D';
+        break;
+      case < 2.99:
+        i = 'C';
+        break;
+      case < 3.99:
+        i = 'B';
+        break;
+      default:
+        i = 'A';
+    }
+    print('Student ${id} gpa: ${gpa} ได้เกรด ${i}');
+  }
+}
+
+void main() {
+  Student student1 = Student(
+    1,
+    'Aee',
+    'wp',
+    gpa: 3.11,
+  );
+  Student student2 = Student(
+    2,
+    'Bee',
+    'gg',
+  );
+  Student student3 = Student(
+    3,
+    'Cee',
+    'ez',
+    gpa: 4.00,
+  );
+  student1.showInfo();
+  student1.changeName(stdFirstname: 'Dee', stdLastname: 'Eey');
+  student1.showInfo();
+  student2.showInfo();
+  student3.checkGrade();
+  student3.showInfo();
+}
